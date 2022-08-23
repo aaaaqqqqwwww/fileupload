@@ -4,12 +4,11 @@ const dotenv = require("dotenv").config();
 const path = require("path");
 const multer = require("multer");
 const cloudinary = require("cloudinary");
-
 const MongoClient = require("mongodb").MongoClient;
 let db = null;
-MongoClient.connect(process.env.MONGO_URL, { useUnifiedTopology: true }, (err, client) => {
+MongoClient.connect("mongodb+srv://eunyoung:tnvjshqk45@cluster0.oh6qak7.mongodb.net/?retryWrites=true&w=majority", { useUnifiedTopology: true }, (err, client) => {
   if (err) {
-    console.log(err);
+    // console.log(err);
   }
   db = client.db("crudapp");
 });

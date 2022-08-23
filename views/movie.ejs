@@ -1,0 +1,20 @@
+<%- include("include/header"); %>
+<main id="main">
+  <div id="contents">
+    <h2 class="title"><%= title %></h2>
+    <div>
+      <ul class="movieView">
+        <li><img src="<%= result.poster %>" alt="<%= result.title %>" class="posterImage" /></li>
+        <li>
+          <div class="textBox">
+            <p class="boxTitle"><%= result.movieTitle %></p>
+            <p><span>개봉일 : </span><%= result.date %></p>
+            <p><span>장르 : </span><%= result.genre %></p>
+            <p><span>평점 : </span><%= result.point %></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+<%- include("include/footer"); %>

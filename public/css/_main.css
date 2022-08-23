@@ -1,0 +1,319 @@
+/* common */
+.section .titleBox {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section .titleBox h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section .titleBox p {
+  line-height: 1.5;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#mainVisual {
+  overflow: hidden;
+}
+#mainVisual li {
+  /* background-size: contain; */
+  /* 가로세로 종횡비 유지하면서 짤리지 않고 가득 채우기 */
+  background-size: cover;
+  /* 가로세로 종횡비 유지하면서 자르면서 가득 채우기 */
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+#mainVisual .visual01 {
+  background-image: url("../images/main/mainVisual01.jpg");
+}
+#mainVisual .visual02 {
+  background-image: url("../images/main/mainVisual02.jpg");
+}
+#mainVisual .visual03 {
+  background-image: url("../images/main/mainVisual03.jpg");
+}
+
+/* sass */
+
+#mainVisual .slogan {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+#mainVisual .slogan h2 {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 30px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+#mainVisual .slogan p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+#mainVisual button {
+  background: none;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+#mainVisual .prev {
+  left: 50px;
+}
+#mainVisual .next {
+  right: 50px;
+}
+#mainVisual button .material-icons {
+  font-size: 64px;
+  vertical-align: top;
+  /* inline-block요소들이 원래 가지고 있는 하단 여백을 없애는 방법 */
+}
+#mainVisual .iconScroll {
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+#mainVisual .iconScroll .icon {
+  border: 2px solid #fff;
+  width: 24px;
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 100px;
+}
+#mainVisual .iconScroll .icon:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 10px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin: 10px auto 0;
+  animation-name: mouseAnimation;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: mouseAnimation 0.75s ease-in-out 0s infinite alternate;
+}
+
+#quickMenu {
+  padding: 0;
+}
+
+#quickMenu .container ul {
+  display: flex;
+}
+#quickMenu .container ul li {
+  overflow: hidden;
+  position: relative;
+}
+#quickMenu .container ul li:hover:before {
+  opacity: 1;
+}
+#quickMenu .container ul li:hover img {
+  transform: scale(1.2);
+}
+#quickMenu .container ul li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+#quickMenu .container ul li .txtBox {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: #fff;
+}
+#quickMenu .container ul li .txtBox p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#quickMenu .container ul li .txtBox h3 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 30px;
+  /* 상하 마진이 겹치면 큰것만 먹는다.  마진병합 현상. */
+}
+#quickMenu .container ul li img {
+  vertical-align: top;
+  transition: transform 0.5s ease-in-out;
+}
+
+#business {
+  background-color: #ccc;
+  background-image: url("../images/main/bgBusiness.jpg");
+  margin-top: 100px;
+}
+
+#business .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  /* align-content는 wrap 속성이 적용되어서 두줄이상 일때 정렬 */
+  height: 720px;
+}
+#business .container ul li {
+  position: relative;
+}
+#business .container ul li .txtBox {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: #fff;
+}
+#business .container ul li .txtBox h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#business .container ul li img {
+  vertical-align: top;
+}
+
+/* business end */
+
+#news .list {
+  display: flex;
+  justify-content: space-between;
+}
+#news .list li {
+  width: 32.5%;
+  border: 1px solid #999;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+}
+
+#news .list li:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#news .list li:after {
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  box-shadow: inset 0 0 0 0 #f00;
+  transition: box-shadow 0.25s ease-in-out;
+  pointer-events: none;
+}
+
+#news .list li:hover:after {
+  box-shadow: inset 0 0 0 10px #f00;
+}
+
+#news .list li .desc {
+  padding: 30px;
+}
+#news .list li .desc h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  white-space: nowrap; /* 글자 한줄로 만들기 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#news .list li .desc .txt {
+  line-height: 1.5;
+  height: 4.5em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 30px;
+}
+
+#news .list li .desc .date {
+  color: #999;
+}
+
+#news .list li img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+/* #news end */
+
+#customer {
+  background-image: url(../images/main/bgCustomer.jpg);
+}
+
+#customer .titleBox {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#customer .titleBox h2:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.btns .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #f00;
+  color: #fff;
+  padding: 0 40px;
+  border-radius: 100px;
+  margin: 0 5px;
+}
+
+@keyframes mouseAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}

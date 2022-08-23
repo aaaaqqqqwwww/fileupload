@@ -1,0 +1,198 @@
+@import "vars";
+@import "mixin";
+
+body {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-size: $font-normal;
+  color: $font-color;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+#header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  margin-top: 100px;
+}
+
+#main {
+}
+#contents {
+  padding: 100px 0;
+  width: 1200px;
+  margin: auto;
+  .title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.inputBox {
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  label {
+    align-items: center;
+    display: flex;
+    .label {
+      width: 150px;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    select {
+      height: 50px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    textarea {
+      flex-grow: 1;
+      height: 300px;
+      resize: none;
+      border-radius: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    button {
+      height: 50px;
+      margin-left: 10px;
+      border: none;
+      color: #fff;
+      outline: none;
+      border-radius: 5px;
+      background-color: #111;
+      padding: 10px;
+    }
+    #userID,
+    #userPW,
+    #userName,
+    #userEmail {
+      flex-grow: 1;
+    }
+    #userJob {
+      width: 200px;
+    }
+    .genreList {
+      display: flex;
+      li {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+.table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  .head {
+    display: table-header-group;
+    background-color: #ddd;
+    span {
+      display: table-cell;
+      border-top: 1px solid #333;
+      text-align: center;
+      padding: 20px 0;
+      font-weight: 700;
+    }
+  }
+  .body {
+    display: table-row-group;
+    width: 100%;
+    > li {
+      display: table-row;
+      width: 100%;
+      .column {
+        display: table-cell;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid #333;
+        vertical-align: middle;
+      }
+      .subject {
+        text-align: left;
+        &:hover {
+          text-decoration: underline;
+          color: rgb(23, 47, 94);
+        }
+      }
+    }
+  }
+}
+
+.btns {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  button,
+  a {
+    font-family: "Noto Sans KR";
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #111;
+    color: #fff;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+}
+.movieView {
+  display: flex;
+  align-items: center;
+  .posterImage {
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+  li {
+    .boxTitle {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(190, 190, 190);
+        margin-top: 15px;
+      }
+    }
+    p {
+      margin-bottom: 15px;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  #contents {
+    width: 100%;
+    padding: 100px 20px;
+  }
+}

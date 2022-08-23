@@ -1,0 +1,196 @@
+body {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #111;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  margin-top: 100px;
+}
+
+#contents {
+  padding: 100px 0;
+  width: 1200px;
+  margin: auto;
+}
+#contents .title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+.inputBox {
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+.inputBox label {
+  align-items: center;
+  display: flex;
+}
+.inputBox label .label {
+  width: 150px;
+}
+.inputBox label input[type=text],
+.inputBox label input[type=number],
+.inputBox label input[type=password],
+.inputBox label select {
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+.inputBox label textarea {
+  flex-grow: 1;
+  height: 300px;
+  resize: none;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.inputBox label button {
+  height: 50px;
+  margin-left: 10px;
+  border: none;
+  color: #fff;
+  outline: none;
+  border-radius: 5px;
+  background-color: #111;
+  padding: 10px;
+}
+.inputBox label #userID,
+.inputBox label #userPW,
+.inputBox label #userName,
+.inputBox label #userEmail {
+  flex-grow: 1;
+}
+.inputBox label #userJob {
+  width: 200px;
+}
+.inputBox label .genreList {
+  display: flex;
+}
+.inputBox label .genreList li {
+  margin-right: 20px;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.table .head {
+  display: table-header-group;
+  background-color: #ddd;
+}
+.table .head span {
+  display: table-cell;
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 700;
+}
+.table .body {
+  display: table-row-group;
+  width: 100%;
+}
+.table .body > li {
+  display: table-row;
+  width: 100%;
+}
+.table .body > li .column {
+  display: table-cell;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  vertical-align: middle;
+}
+.table .body > li .subject {
+  text-align: left;
+}
+.table .body > li .subject:hover {
+  text-decoration: underline;
+  color: rgb(23, 47, 94);
+}
+
+.btns {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.btns button,
+.btns a {
+  font-family: "Noto Sans KR";
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #111;
+  color: #fff;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.movieView {
+  display: flex;
+  align-items: center;
+}
+.movieView .posterImage {
+  width: 800px;
+  height: 500px;
+  object-fit: cover;
+  margin-right: 50px;
+}
+.movieView li .boxTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.movieView li .boxTitle:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(190, 190, 190);
+  margin-top: 15px;
+}
+.movieView li p {
+  margin-bottom: 15px;
+}
+.movieView li p span {
+  font-weight: 600;
+}
+
+@media all and (max-width: 1200px) {
+  #contents {
+    width: 100%;
+    padding: 100px 20px;
+  }
+}
